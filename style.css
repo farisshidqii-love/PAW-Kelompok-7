@@ -1,4 +1,21 @@
-table {
+.table.table-striped-columns.table-bordered {
+  width: 99%;
+  margin: 20px auto;
+  border-collapse: collapse;
+}
+.form {
   width: 50%;
-  margin: 24;
+}
+.select {
+  width: 10%;
+  float: left;
+}
+.isi_nomor {
+  width: 90%;
+  float: right;
+  display: block;
+  padding-top: 32px;
+}
+.btn.btn-primary {
+  margin-top: 10px;
 }
