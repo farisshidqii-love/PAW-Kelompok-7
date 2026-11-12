@@ -28,5 +28,5 @@ Route::middleware('auth')->group(function () {
     Route::delete('/dokter/{dokter}', [DokterController::class, 'destroy'])
         ->name('dokter.destroy')
         ->middleware('role:admin')
-        ->can('kelola-dokter-penuh');
+        ->can('kelola-dokter');
 });

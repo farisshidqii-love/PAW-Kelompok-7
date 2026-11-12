@@ -14,9 +14,13 @@ class AppServiceProvider extends ServiceProvider
     }
 
     public function boot(): void
-    {
-        Gate::define('kelola-dokter-penuh', function (User $user) {
-            return $user->hasRole('admin');
-        });
-    }
+{
+    Gate::define('lihat-kontak-dokter', function (User $user) {
+        return $user->hasRole('admin', 'staff', 'pasien');
+    });
+
+    Gate::define('kelola-dokter', function (User $user) {
+        return $user->hasRole('admin', 'staff');
+    });
+}
 }
